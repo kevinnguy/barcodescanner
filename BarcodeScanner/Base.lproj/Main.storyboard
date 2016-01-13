@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfx-O9-hYs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6S-lx-tv7">
+                                        <rect key="frame" x="20" y="220" width="560" height="160"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="m0m-Si-sWM"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-7V-yiS">
+                                        <rect key="frame" x="25" y="515" width="550" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="dxB-2J-nu8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88970905542373657" green="0.8898618221282959" blue="0.88969939947128296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="y6S-lx-tv7" firstAttribute="centerX" secondItem="dfx-O9-hYs" secondAttribute="centerX" id="LCt-gV-Hfm"/>
+                                    <constraint firstItem="y6S-lx-tv7" firstAttribute="leading" secondItem="dfx-O9-hYs" secondAttribute="leading" constant="20" id="UrD-gc-VMZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="KwE-7V-yiS" secondAttribute="trailing" constant="25" id="c8P-U3-KGB"/>
+                                    <constraint firstItem="y6S-lx-tv7" firstAttribute="centerY" secondItem="dfx-O9-hYs" secondAttribute="centerY" id="e08-6j-BQB"/>
+                                    <constraint firstAttribute="trailing" secondItem="y6S-lx-tv7" secondAttribute="trailing" constant="20" id="jdd-Hh-qzd"/>
+                                    <constraint firstItem="KwE-7V-yiS" firstAttribute="leading" secondItem="dfx-O9-hYs" secondAttribute="leading" constant="25" id="mYS-ZV-wgF"/>
+                                    <constraint firstAttribute="bottom" secondItem="KwE-7V-yiS" secondAttribute="bottom" constant="25" id="oAh-36-26u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfx-O9-hYs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9sI-Tv-Qd6"/>
+                            <constraint firstAttribute="trailing" secondItem="dfx-O9-hYs" secondAttribute="trailing" id="Dvd-WV-tf2"/>
+                            <constraint firstItem="dfx-O9-hYs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UGC-Tg-WKx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dfx-O9-hYs" secondAttribute="bottom" id="h6L-ca-tuS"/>
+                            <constraint firstItem="dfx-O9-hYs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xrU-4r-ore"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xrU-4r-ore"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="dfx-O9-hYs" id="Kk6-HD-Hd6"/>
+                        <outlet property="scannerView" destination="y6S-lx-tv7" id="zo7-wF-ggf"/>
+                        <outlet property="submitButton" destination="KwE-7V-yiS" id="e2r-jL-9JR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
